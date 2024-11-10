@@ -28,6 +28,7 @@ var _movements = {
 	DEAD_HIT = "dead_hit",
 	ATTACK = "attack_2",
 	BOMB = "attack_3",
+	 BLOCK = "block"
 }
 var _current_movement = _movements.IDLE # Variable de movimiento
 var _is_jumping = false # Indicamos que el personaje está saltando
@@ -38,7 +39,7 @@ var attacking = false # Define si esta atacando
 var bombing = false # Define si esta atacando
 var _is_playing: String = "" # Define si se esta reproducionedo el sonido
 var turn_side: String = "right" # Define si se esta reproducionedo el sonido
-var blocking = false
+
 # Precargamos los sonidos de saltar
 var _jump_sound = preload("res://assets/sounds/jump.mp3")
 var _run_sound = preload("res://assets/sounds/running.mp3")
@@ -46,6 +47,7 @@ var _dead_sound = preload("res://assets/sounds/dead.mp3")
 var _male_hurt_sound = preload("res://assets/sounds/male_hurt.mp3")
 var _hit_sound = preload("res://assets/sounds/slash.mp3")
 var _block_sound = preload("res://assets/sounds/slash.mp3")
+var blocking = false
 
 # Función de inicialización
 func _ready():
@@ -58,14 +60,7 @@ func _ready():
 # Función de ejecución de físicas
 func _physics_process(_delta):
 	_move(_delta)
-
-func block_damage():
-	if not blocking:
-		blocking = true
-		_play_sound(_block_sound)
-		main_animation.play("blocking")  # Asegúrate de que "blocking" sea el nombre correcto de la animación de bloqueo
-		await get_tree().create_timer(0.5).timeout  # Duración del bloqueo en segundos
-		blocking = false
+	
 
 
 func _unhandled_input(event):
@@ -76,8 +71,15 @@ func _unhandled_input(event):
 	# Cuando se presiona la tecla b, lanzamos bomba
 	elif event.is_action_released("bomb"):
 		_current_movement = _movements.BOMB
+	
 	elif event.is_action_pressed("block"):
-		block_damage()
+		
+		_current_movement = _movements.BLOCK  # Asumir que tienes un movimiento BLOCK definido
+	
+		# Aquí establecemos la animación de bloqueo solo si no estamos ya en ella
+		if _current_movement != _movements.BLOCK:
+			_set_animation()
+		
 	_set_animation()
 
 
@@ -120,6 +122,9 @@ func _move(delta):
 
 # Controla la animación según el movimiento del personaje
 func _set_animation():
+	if blocking:
+		
+		return
 	# Si esta atacando no interrumpimos la animació	
 	if attacking or bombing:
 		return
@@ -194,7 +199,7 @@ func die():
 
 # Recibir daño
 func hit(value: int):
-	if _died or blocking:
+	if _died:
 		return
 	attacking = false
 	HealthDashboard.remove_life(value)
