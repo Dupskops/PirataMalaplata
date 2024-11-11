@@ -52,7 +52,8 @@ _path_to_scene = "res://scenes/game/levels/rooms/scene_3/scene_3.tscn"
 [node name="Enemies" type="Node2D" parent="."]
 
 [node name="Crabby" parent="Enemies" instance=ExtResource("7_88gpd")]
-position = Vector2(1409, 561)
+position = Vector2(1394, 515)
+scale = Vector2(4.42, 4.42)
 animation = "idle"
 moving_direction = "left"
 
