@@ -28,7 +28,7 @@ var _movements = {
 	DEAD_HIT = "dead_hit",
 	ATTACK = "attack_2",
 	BOMB = "attack_3",
-	 BLOCK = "block"
+	BLOCK = "block"
 }
 var _current_movement = _movements.IDLE # Variable de movimiento
 var _is_jumping = false # Indicamos que el personaje está saltando
@@ -64,6 +64,12 @@ func _physics_process(_delta):
 
 
 func _unhandled_input(event):
+	if event.is_action_pressed("block"):
+		blocking = true
+		_current_movement = _movements.BLOCK  
+		main_animation.play("block") 
+	elif event.is_action_released("block"): blocking = false
+	print(blocking)
 	# Cuando se presiona la tecla x, atacamos	
 	if event.is_action_released("hit"):
 		character.velocity.x = 0
@@ -72,19 +78,15 @@ func _unhandled_input(event):
 	elif event.is_action_released("bomb"):
 		_current_movement = _movements.BOMB
 	
-	elif event.is_action_pressed("block"):
-		
-		_current_movement = _movements.BLOCK  # Asumir que tienes un movimiento BLOCK definido
 	
-		# Aquí establecemos la animación de bloqueo solo si no estamos ya en ella
-		if _current_movement != _movements.BLOCK:
-			_set_animation()
 		
 	_set_animation()
 
 
 # Función de movimiento general del personaje
 func _move(delta):
+	
+		# Asumir que tienes un movimiento BLOCK definido
 	# Cuando se presiona la tecla (flecha izquierda), movemos el personaje a la izquierda
 	if Input.is_action_pressed("izquierda"):
 		character.velocity.x = -velocity
@@ -123,8 +125,12 @@ func _move(delta):
 # Controla la animación según el movimiento del personaje
 func _set_animation():
 	if blocking:
-		
+		if main_animation.animation !="block":
+			main_animation.play("block")
+			return
 		return
+	
+
 	# Si esta atacando no interrumpimos la animació	
 	if attacking or bombing:
 		return
@@ -199,6 +205,8 @@ func die():
 
 # Recibir daño
 func hit(value: int):
+	if blocking:
+		return
 	if _died:
 		return
 	attacking = false
@@ -226,10 +234,14 @@ func _on_animation_animation_finished():
 		attacking = false
 	elif main_animation.get_animation() == _movements.BOMB:
 		bombing = false
+	elif main_animation.get_animation() == _movements.BLOCK:
+		blocking = false
 
 
 func _on_animation_frame_changed():	
 	# Si la animación es de atacar habilitamos el colicionador
+	if blocking:
+		return
 	if main_animation.animation == "attack_2" and main_animation.frame == 1:
 		_collision.set_deferred("disabled", false)
 	else:
@@ -272,6 +284,8 @@ func set_disabled(disabled: bool):
 	set_physics_process(not disabled)
 	
 func set_idle():
+	if blocking:
+		return
 	# Movimiento por defecto (animación de "reposo")
 	main_animation.play(_movements.IDLE_WITH_SWORD)
 	# Pausamos el sonido
