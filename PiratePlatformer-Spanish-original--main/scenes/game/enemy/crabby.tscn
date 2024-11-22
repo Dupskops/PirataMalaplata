@@ -523,7 +523,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_62ixa"]
 size = Vector2(42, 25)
 
-[node name="Crabby" type="CharacterBody2D"]
+[node name="Crabby" type="CharacterBody2D" groups=["Enemigo"]]
 script = SubResource("GDScript_6chrj")
 
 [node name="EnemyAnimation" type="AnimatedSprite2D" parent="."]

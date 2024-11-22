@@ -48,7 +48,7 @@ var _male_hurt_sound = preload("res://assets/sounds/male_hurt.mp3")
 var _hit_sound = preload("res://assets/sounds/slash.mp3")
 var _block_sound = preload("res://assets/sounds/slash.mp3")
 var blocking = false
-
+@onready var AreaAttack : Area2D = get_parent().get_node("AreaSword")
 # Función de inicialización
 func _ready():
 	main_animation.play(_current_movement)
@@ -153,6 +153,14 @@ func _set_animation():
 		_play_sound(_hit_sound)
 		# Agregamos el effecto especial
 		_play_sword_effect()
+		print(_movements.ATTACK)
+		
+			
+		for entidad in AreaAttack.get_overlapping_bodies():
+			print(AreaAttack)
+			if entidad.is_in_group("Enemigo"):
+				entidad._damage()
+					
 	elif _current_movement == _movements.BOMB:
 		# Lanzamos bomba
 		bombing = true
