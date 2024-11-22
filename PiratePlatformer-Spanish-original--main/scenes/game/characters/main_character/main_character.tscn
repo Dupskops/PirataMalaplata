@@ -1,4 +1,4 @@
-[gd_scene load_steps=133 format=3 uid="uid://ca3ueo0yewjov"]
+[gd_scene load_steps=142 format=3 uid="uid://ca3ueo0yewjov"]
 
 [ext_resource type="Texture2D" uid="uid://dxflqrst5dy31" path="res://assets/sprites/treasure_hunters/captain_clown_nose/sprites/captain_clown_nose/captain_clown_nose_without_sword/01-idle/idle_01.png" id="2_dghf6"]
 [ext_resource type="Script" path="res://scenes/game/characters/main_character/MainCharacterBomb.gd" id="3_odvu6"]
@@ -34,6 +34,7 @@
 [ext_resource type="Texture2D" uid="uid://chvl4pfhnydl0" path="res://assets/sprites/treasure_hunters/captain_clown_nose/sprites/dust_particles/fall_02.png" id="42_yjra8"]
 [ext_resource type="Texture2D" uid="uid://cqja7i2c4ka4q" path="res://assets/sprites/treasure_hunters/captain_clown_nose/sprites/dust_particles/fall_03.png" id="43_g1ou6"]
 [ext_resource type="Texture2D" uid="uid://lv7snvqhw423" path="res://assets/sprites/treasure_hunters/captain_clown_nose/sprites/dust_particles/fall_04.png" id="44_57rgi"]
+[ext_resource type="Texture2D" uid="uid://cdxn4en3rh6fy" path="res://SAHDOW Series - Frost Curse Boss/Sprite/6. shoot effect.png" id="45_4ljls"]
 [ext_resource type="Texture2D" uid="uid://b3adejfghn5ds" path="res://assets/sprites/treasure_hunters/captain_clown_nose/sprites/dust_particles/fall_05.png" id="45_hsjcg"]
 [ext_resource type="Texture2D" uid="uid://bsucllhwsnc2t" path="res://assets/sprites/treasure_hunters/captain_clown_nose/sprites/dust_particles/jump_01.png" id="46_y7bdw"]
 [ext_resource type="Texture2D" uid="uid://cjeim1vfg1sic" path="res://assets/sprites/treasure_hunters/captain_clown_nose/sprites/dust_particles/jump_02.png" id="47_6eutl"]
@@ -48,22 +49,6 @@
 [ext_resource type="Texture2D" uid="uid://dfilactnw23ej" path="res://assets/sprites/treasure_hunters/captain_clown_nose/sprites/dust_particles/run_05.png" id="56_e847i"]
 [ext_resource type="Script" path="res://scenes/game/characters/main_character/main_character_collision.gd" id="57_7h47x"]
 [ext_resource type="Texture2D" uid="uid://boujit3ktfwgx" path="res://SAHDOW Series - Frost Curse Boss/Sprite/5. full Shield.png" id="69_j2lj2"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_msfjo"]
-atlas = ExtResource("4_wfxkp")
-region = Rect2(0, 0, 137, 40)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_lbkx0"]
-atlas = ExtResource("4_wfxkp")
-region = Rect2(137, 0, 137, 40)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_h1a7b"]
-atlas = ExtResource("4_wfxkp")
-region = Rect2(274, 0, 137, 40)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_k1hd5"]
-atlas = ExtResource("4_wfxkp")
-region = Rect2(411, 0, 137, 40)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mbe0n"]
 atlas = ExtResource("4_wfxkp")
@@ -356,18 +341,6 @@ region = Rect2(96, 0, 32, 64)
 [sub_resource type="SpriteFrames" id="SpriteFrames_sohxe"]
 animations = [{
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_msfjo")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_lbkx0")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_h1a7b")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_k1hd5")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_mbe0n")
 }, {
@@ -774,8 +747,97 @@ animations = [{
 "speed": 8.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_58jy5"]
+atlas = ExtResource("45_4ljls")
+region = Rect2(931, 0, 133, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sq6cb"]
+atlas = ExtResource("45_4ljls")
+region = Rect2(1064, 0, 133, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4w1ch"]
+atlas = ExtResource("45_4ljls")
+region = Rect2(1197, 0, 133, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ashws"]
+atlas = ExtResource("45_4ljls")
+region = Rect2(1330, 0, 133, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ope8v"]
+atlas = ExtResource("45_4ljls")
+region = Rect2(1463, 0, 133, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_brgnj"]
+atlas = ExtResource("45_4ljls")
+region = Rect2(1596, 0, 133, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0e1ah"]
+atlas = ExtResource("45_4ljls")
+region = Rect2(1729, 0, 133, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pnrpf"]
+atlas = ExtResource("45_4ljls")
+region = Rect2(1862, 0, 133, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vh83n"]
+atlas = ExtResource("45_4ljls")
+region = Rect2(1995, 0, 133, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bs365"]
+atlas = ExtResource("45_4ljls")
+region = Rect2(2128, 0, 133, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_avkvn"]
+atlas = ExtResource("45_4ljls")
+region = Rect2(2261, 0, 133, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r81qj"]
+atlas = ExtResource("45_4ljls")
+region = Rect2(2394, 0, 133, 69)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_isfec"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_58jy5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sq6cb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4w1ch")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ashws")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ope8v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_brgnj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0e1ah")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pnrpf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vh83n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bs365")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_avkvn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r81qj")
+}],
+"loop": true,
+"name": &"attack_2_effect",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("10_1aidl")
@@ -790,7 +852,7 @@ animations = [{
 "texture": null
 }],
 "loop": false,
-"name": &"attack_2_effect",
+"name": &"attack_2_effect (original)",
 "speed": 8.0
 }, {
 "frames": [{
@@ -862,7 +924,7 @@ script = ExtResource("3_odvu6")
 
 [node name="Animation" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_sohxe")
-animation = &"fall_with_sword"
+animation = &"attack_2"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, -2.5)
@@ -872,7 +934,7 @@ shape = SubResource("RectangleShape2D_q04ya")
 visible = false
 modulate = Color(0.137255, 0.423529, 0, 1)
 sprite_frames = SubResource("SpriteFrames_cwldb")
-animation = &"fall"
+animation = &"run"
 
 [node name="EffectsSword" type="AnimatedSprite2D" parent="."]
 z_index = 2

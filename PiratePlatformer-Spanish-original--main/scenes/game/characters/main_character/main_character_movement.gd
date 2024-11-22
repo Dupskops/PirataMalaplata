@@ -26,7 +26,7 @@ var _movements = {
 	FALL_WITH_SWORD = "fall_with_sword",
 	HIT_WITH_SWORD = "hit_with_sword",
 	DEAD_HIT = "dead_hit",
-	ATTACK = "attack_2",
+	ATTACK = "attack_1",
 	BOMB = "attack_3",
 	BLOCK = "block"
 }
