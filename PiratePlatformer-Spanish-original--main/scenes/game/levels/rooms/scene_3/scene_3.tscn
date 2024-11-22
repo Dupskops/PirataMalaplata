@@ -21,7 +21,7 @@ load_path = "res://.godot/imported/small_cloud_1.png-40532304be8a8e58b358963bfcb
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_dxm3p"]
 load_path = "res://.godot/imported/small_cloud_1.png-40532304be8a8e58b358963bfcb15f67.ctex"
 
-[node name="Main" type="Node2D"]
+[node name="Main2" type="Node2D"]
 
 [node name="MainCharacter" parent="." instance=ExtResource("2_e4qjl")]
 position = Vector2(10, 435)
