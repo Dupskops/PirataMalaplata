@@ -1,4 +1,4 @@
-[gd_scene load_steps=125 format=3 uid="uid://ca3ueo0yewjov"]
+[gd_scene load_steps=133 format=3 uid="uid://ca3ueo0yewjov"]
 
 [ext_resource type="Texture2D" uid="uid://dxflqrst5dy31" path="res://assets/sprites/treasure_hunters/captain_clown_nose/sprites/captain_clown_nose/captain_clown_nose_without_sword/01-idle/idle_01.png" id="2_dghf6"]
 [ext_resource type="Script" path="res://scenes/game/characters/main_character/MainCharacterBomb.gd" id="3_odvu6"]
@@ -16,7 +16,6 @@
 [ext_resource type="Texture2D" uid="uid://bi0tjjqm368wn" path="res://assets/sprites/treasure_hunters/captain_clown_nose/sprites/captain_clown_nose/captain_clown_nose_with_sword/17_attack_3/attack_3_02.png" id="9_muuna"]
 [ext_resource type="Texture2D" uid="uid://diuerkv0n2f4d" path="res://assets/sprites/treasure_hunters/captain_clown_nose/sprites/captain_clown_nose/sword_effects/25-attack_2/attack_2_01.png" id="10_1aidl"]
 [ext_resource type="Texture2D" uid="uid://blp1fn7tchnw" path="res://assets/sprites/treasure_hunters/captain_clown_nose/sprites/captain_clown_nose/captain_clown_nose_with_sword/17_attack_3/attack_3_03.png" id="10_efncg"]
-[ext_resource type="Texture2D" uid="uid://b1tmodx1q7bxg" path="res://assets/sprites/treasure_hunters/captain_clown_nose/sprites/captain_clown_nose/captain_clown_nose_with_sword/12_fall_sword/fall_sword_01.png" id="10_uoinh"]
 [ext_resource type="Texture2D" uid="uid://b107itpfhsblm" path="res://assets/sprites/treasure_hunters/captain_clown_nose/sprites/captain_clown_nose/sword_effects/25-attack_2/attack_2_02.png" id="11_qm4vv"]
 [ext_resource type="Texture2D" uid="uid://cvp7qu6ou0beo" path="res://assets/sprites/treasure_hunters/captain_clown_nose/sprites/captain_clown_nose/captain_clown_nose_with_sword/14_hit_sword/hit_sword_01.png" id="11_spt4m"]
 [ext_resource type="Texture2D" uid="uid://c3r8mgixho1un" path="res://assets/sprites/treasure_hunters/captain_clown_nose/sprites/captain_clown_nose/captain_clown_nose_with_sword/14_hit_sword/hit_sword_02.png" id="12_r62e3"]
@@ -25,12 +24,9 @@
 [ext_resource type="Texture2D" uid="uid://copn5jr6yv0wh" path="res://assets/sprites/treasure_hunters/captain_clown_nose/sprites/captain_clown_nose/captain_clown_nose_with_sword/14_hit_sword/hit_sword_03.png" id="13_uj6mo"]
 [ext_resource type="Texture2D" uid="uid://cohjvinre4pwy" path="res://assets/sprites/treasure_hunters/captain_clown_nose/sprites/captain_clown_nose/captain_clown_nose_with_sword/14_hit_sword/hit_sword_04.png" id="14_6fnvh"]
 [ext_resource type="Texture2D" uid="uid://clhn3g424s8mf" path="res://SAHDOW Series - Frost Curse Boss/Sprite/4. idle + Shield.png" id="16_pq8u6"]
-[ext_resource type="Texture2D" uid="uid://bhg2jiah03q80" path="res://assets/sprites/treasure_hunters/captain_clown_nose/sprites/captain_clown_nose/captain_clown_nose_without_sword/07-dead_hit/dead_hit_01.png" id="20_2ax7x"]
+[ext_resource type="Texture2D" uid="uid://b2myqyfv7e76b" path="res://SAHDOW Series - Frost Curse Boss/Sprite/8. fall.png" id="19_5r2tu"]
 [ext_resource type="Texture2D" uid="uid://blpgguk4mj6k5" path="res://assets/sprites/treasure_hunters/captain_clown_nose/sprites/captain_clown_nose/captain_clown_nose_with_sword/13_ground_sword/ground_sword_01.png" id="20_w36nj"]
-[ext_resource type="Texture2D" uid="uid://b3i7q2r7mfx54" path="res://assets/sprites/treasure_hunters/captain_clown_nose/sprites/captain_clown_nose/captain_clown_nose_without_sword/07-dead_hit/dead_hit_02.png" id="21_8g4w3"]
 [ext_resource type="Texture2D" uid="uid://dlw0nfpr0botb" path="res://assets/sprites/treasure_hunters/captain_clown_nose/sprites/captain_clown_nose/captain_clown_nose_with_sword/13_ground_sword/ground_sword_02.png" id="21_ra5y8"]
-[ext_resource type="Texture2D" uid="uid://bb038lyw5wm27" path="res://assets/sprites/treasure_hunters/captain_clown_nose/sprites/captain_clown_nose/captain_clown_nose_without_sword/07-dead_hit/dead_hit_03.png" id="22_0thvi"]
-[ext_resource type="Texture2D" uid="uid://bvpimlytuuhkp" path="res://assets/sprites/treasure_hunters/captain_clown_nose/sprites/captain_clown_nose/captain_clown_nose_without_sword/07-dead_hit/dead_hit_04.png" id="23_0sshq"]
 [ext_resource type="Texture2D" uid="uid://dixqekosxnm2a" path="res://SAHDOW Series - Frost Curse Boss/Sprite/1. idle.png" id="30_6xuvc"]
 [ext_resource type="Texture2D" uid="uid://dysfs5syx4kvt" path="res://SAHDOW Series - Frost Curse Boss/Sprite/7. jump.png" id="31_gjj1o"]
 [ext_resource type="Texture2D" uid="uid://o2smpp4fhovb" path="res://SAHDOW Series - Frost Curse Boss/Sprite/2. run.png" id="32_wybp3"]
@@ -252,6 +248,54 @@ region = Rect2(279, 0, 31, 40)
 [sub_resource type="AtlasTexture" id="AtlasTexture_n5vij"]
 atlas = ExtResource("13_d325m")
 region = Rect2(310, 0, 31, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l2jga"]
+atlas = ExtResource("13_d325m")
+region = Rect2(0, 0, 31, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n2kmf"]
+atlas = ExtResource("13_d325m")
+region = Rect2(31, 0, 31, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_haepj"]
+atlas = ExtResource("13_d325m")
+region = Rect2(62, 0, 31, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a5ei7"]
+atlas = ExtResource("13_d325m")
+region = Rect2(93, 0, 31, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2jb8v"]
+atlas = ExtResource("13_d325m")
+region = Rect2(124, 0, 31, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ak5xu"]
+atlas = ExtResource("13_d325m")
+region = Rect2(155, 0, 31, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sh58m"]
+atlas = ExtResource("13_d325m")
+region = Rect2(186, 0, 31, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lcjk6"]
+atlas = ExtResource("13_d325m")
+region = Rect2(217, 0, 31, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wjybl"]
+atlas = ExtResource("13_d325m")
+region = Rect2(248, 0, 31, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rp4so"]
+atlas = ExtResource("13_d325m")
+region = Rect2(279, 0, 31, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3jgji"]
+atlas = ExtResource("13_d325m")
+region = Rect2(310, 0, 31, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qhke0"]
+atlas = ExtResource("19_5r2tu")
+region = Rect2(0, 0, 23, 39)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_o70oi"]
 atlas = ExtResource("30_6xuvc")
@@ -511,16 +555,37 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("20_2ax7x")
+"texture": SubResource("AtlasTexture_l2jga")
 }, {
 "duration": 1.0,
-"texture": ExtResource("21_8g4w3")
+"texture": SubResource("AtlasTexture_n2kmf")
 }, {
 "duration": 1.0,
-"texture": ExtResource("22_0thvi")
+"texture": SubResource("AtlasTexture_haepj")
 }, {
 "duration": 1.0,
-"texture": ExtResource("23_0sshq")
+"texture": SubResource("AtlasTexture_a5ei7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2jb8v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ak5xu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sh58m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lcjk6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wjybl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rp4so")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3jgji")
 }],
 "loop": false,
 "name": &"dead_hit",
@@ -548,7 +613,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("10_uoinh")
+"texture": SubResource("AtlasTexture_qhke0")
 }],
 "loop": true,
 "name": &"fall_with_sword",
@@ -641,7 +706,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q04ya"]
-size = Vector2(26, 38)
+size = Vector2(24, 25)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_cwldb"]
 animations = [{
@@ -797,10 +862,10 @@ script = ExtResource("3_odvu6")
 
 [node name="Animation" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_sohxe")
-animation = &"block"
+animation = &"fall_with_sword"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 4)
+position = Vector2(-1, -2.5)
 shape = SubResource("RectangleShape2D_q04ya")
 
 [node name="Effects" type="AnimatedSprite2D" parent="."]
@@ -811,7 +876,7 @@ animation = &"fall"
 
 [node name="EffectsSword" type="AnimatedSprite2D" parent="."]
 z_index = 2
-position = Vector2(39, 4)
+position = Vector2(32, -1)
 sprite_frames = SubResource("SpriteFrames_isfec")
 animation = &"attack_2_effect"
 
