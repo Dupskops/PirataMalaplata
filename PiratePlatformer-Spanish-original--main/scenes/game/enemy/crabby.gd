@@ -223,12 +223,12 @@ func _move(_direction):
 
 func _on_area_2d_area_entered(area):
 	# Si estan atacando al enemigo
-	if area.is_in_group("hit"):
-		_damage()
-	elif area.is_in_group("die"):
-		die = true
-		_damage()
-
+	#if area.is_in_group("hit"):
+		#_damage()
+	#elif area.is_in_group("die"):
+		#die = true
+		#_damage()
+	pass
 func _damage():	
 	# Agregamos un golpe
 	_has_hits += 1

@@ -250,11 +250,11 @@ func _on_animation_frame_changed():
 	# Si la animación es de atacar habilitamos el colicionador
 	if blocking:
 		return
-	if main_animation.animation == "attack_2" and main_animation.frame == 1:
-		_collision.set_deferred("disabled", false)
-	else:
-		# Si la animación no es de atacar deshabilitamos el colicionador
-		_collision.set_deferred("disabled", true)
+	#if main_animation.animation == "attack_2" and main_animation.frame == 1:
+		#_collision.set_deferred("disabled", false)
+	#else:
+		## Si la animación no es de atacar deshabilitamos el colicionador
+		#_collision.set_deferred("disabled", true)
 		
 	if main_animation.animation == _movements.JUMP_WITH_SWORD:
 		# Validamos si el sonido ya esta sonando

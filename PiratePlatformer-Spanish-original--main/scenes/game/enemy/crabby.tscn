@@ -91,11 +91,11 @@ var _stop_detection = false
 # Vandera de no detectar ataques
 var _stop_attack = false
 # Cuantas veces aguanta
-var _hit_to_die = 50
+var _hit_to_die = 3
 # Cuantas veces pegaron al personaje principal
 var _has_hits = 0
 # La muerte del cangrejo
-var die = true
+var die = false
 
 
 # Función de inicialización
@@ -270,12 +270,12 @@ func _move(_direction):
 
 func _on_area_2d_area_entered(area):
 	# Si estan atacando al enemigo
-	if area.is_in_group(\"hit\"):
-		_damage()
-	elif area.is_in_group(\"die\"):
-		die = true
-		_damage()
-
+	#if area.is_in_group(\"hit\"):
+		#_damage()
+	#elif area.is_in_group(\"die\"):
+		#die = true
+		#_damage()
+	pass
 func _damage():	
 	# Agregamos un golpe
 	_has_hits += 1
@@ -285,17 +285,9 @@ func _damage():
 	# Reproducimos la animación de pegar
 	_animation.play(\"hit\")
 	_animation_effect.play(\"idle\")
+	#die = true
 	
-	# Validamos si tenemos ataque especial
-	if Global.number_attack > 0:
-		# Restamos 1 al ataque especial
-		die = true
-		Global.number_attack -= 1
 	
-	# Validamos si ya no tenemos ataque
-	if Global.number_attack == 0:
-		# Seteamos el ataque normal
-		Global.attack_effect = \"normal\"
 
 	if die or _hit_to_die <= _has_hits:
 		# Seteamoas banderita no atacar
