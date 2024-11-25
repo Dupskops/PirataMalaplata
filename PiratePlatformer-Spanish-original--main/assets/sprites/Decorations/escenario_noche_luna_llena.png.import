@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bgwug3gd6548b"
-path="res://.godot/imported/mapa_oscuro_selva.png-255f6b65ebfe6fee46ab459526cb5f02.ctex"
+uid="uid://bna6haichei6y"
+path="res://.godot/imported/escenario_noche_luna_llena.png-f635960537e6c8414df21a1135652c87.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mapa_oscuro_selva.png"
-dest_files=["res://.godot/imported/mapa_oscuro_selva.png-255f6b65ebfe6fee46ab459526cb5f02.ctex"]
+source_file="res://assets/sprites/Decorations/escenario_noche_luna_llena.png"
+dest_files=["res://.godot/imported/escenario_noche_luna_llena.png-f635960537e6c8414df21a1135652c87.ctex"]
 
 [params]
 

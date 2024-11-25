@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bm7hpvmcwpk75"
-path="res://.godot/imported/dungeon-1.png-ab280abbcc5ff2f89d3a2a2c8a2385d3.ctex"
+uid="uid://u30pf428jby5"
+path="res://.godot/imported/entrada_a_la_cueva_del_jefe.png-3f4ee47a2029d405170f598b79309b68.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://dungeon-1.png"
-dest_files=["res://.godot/imported/dungeon-1.png-ab280abbcc5ff2f89d3a2a2c8a2385d3.ctex"]
+source_file="res://assets/sprites/Decorations/entrada_a_la_cueva_del_jefe.png"
+dest_files=["res://.godot/imported/entrada_a_la_cueva_del_jefe.png-3f4ee47a2029d405170f598b79309b68.ctex"]
 
 [params]
 
