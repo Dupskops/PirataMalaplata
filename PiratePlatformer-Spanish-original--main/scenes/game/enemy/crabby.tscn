@@ -95,7 +95,7 @@ var _hit_to_die = 50
 # Cuantas veces pegaron al personaje principal
 var _has_hits = 0
 # La muerte del cangrejo
-var die = true
+var die = false
 
 
 # Función de inicialización
