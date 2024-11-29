@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://dhor7t5klwdwx"]
+[gd_scene load_steps=21 format=3 uid="uid://dhor7t5klwdwx"]
 
 [ext_resource type="PackedScene" uid="uid://8rbt5lmdrp0s" path="res://scenes/game/camera/camera.tscn" id="1_8l71v"]
 [ext_resource type="Script" path="res://scenes/game/levels/rooms/scene_1/scene_1.gd" id="1_j3e3j"]
@@ -1563,6 +1563,9 @@ margins = Vector2i(0, 7)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_i37rd")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3x710"]
+size = Vector2(31, 21)
+
 [node name="Main" type="Node2D"]
 script = ExtResource("1_j3e3j")
 
@@ -1609,6 +1612,10 @@ layer_1/tile_data = PackedInt32Array(2228238, 655360, 16, 2228239, 655360, 16, 2
 [node name="Areas" type="Node2D" parent="."]
 
 [node name="AreaNextLevel" type="Area2D" parent="Areas"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Areas/AreaNextLevel"]
+position = Vector2(496, 428)
+shape = SubResource("RectangleShape2D_3x710")
 
 [node name="Death" parent="Areas" instance=ExtResource("16_kwprd")]
 position = Vector2(662, 558)
